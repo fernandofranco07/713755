@@ -22,16 +22,16 @@ void printArray(Profesor per3[], int persona3);
 int main(){
 	setvbuf(stderr, NULL, _IONBF, 0);
 	setvbuf(stdout, NULL, _IONBF, 0);
-	printf("Las listas son de máximo 20 elementos c/u\n");
+	printf("Las listas son de mÃ¡ximo 20 elementos c/u\n");
 	Profesor per[20];
 	Profesor per2[20];
 	Profesor per3[40];
 	int n, n1;
-	printf("¿Cuántos maestros tienes?(lista 1)");
+	printf("Â¿CuÃ¡ntos maestros tienes?(lista 1)");
 	scanf("%d",&n);
 	fflush(stdin);
 	readArray(per, n);
-	printf("¿Cuántos maestros tienes?(lista 2)");
+	printf("Â¿CuÃ¡ntos maestros tienes?(lista 2)");
 	scanf("%d",&n1);
 	fflush(stdin);
 	readArray(per2,n1);
@@ -70,16 +70,16 @@ void readArray(Profesor per[], int persona){
 		scanf(" %f", &(*(p+i)).calificacion);
 	}
 }
-//void readArray(Profesor per[20], int persona){//prototipo de otra funcion(otra opción)
+//void readArray(Profesor per[20], int persona){//prototipo de otra funcion(otra opciÃ³n)
 //	for( int i =0; i<persona;i++){
-//		printf("¿Cuál es el nombre del profesor?¿Cuál es su calificación?\n");
+//		printf("Â¿CuÃ¡l es el nombre del profesor?Â¿CuÃ¡l es su calificaciÃ³n?\n");
 //		gets(per[i].nombre);
 //		fflush(stdin);
 //		scanf(" %f", &per[i].calificacion);
 //	}
 //}
 
-//void sortArray(Profesor per[20] , int i){//prototipo de otra funcion(otra opción)
+//void sortArray(Profesor per[20] , int i){//prototipo de otra funcion(otra opciÃ³n)
 //	Profesor sort;
 //		for(int x=0; x<i;x++){
 //			if(per[x].calificacion>per[x+1].calificacion){
@@ -87,8 +87,7 @@ void readArray(Profesor per[], int persona){
 //				per[x]=per[x+1];
 //				per[x+1]=sort;
 //			}
-//		}
-//}
+//		}//}
 void sortArray(Profesor per3[40], int persona3){
 	Profesor *sort=per3;
 	float x;
@@ -116,12 +115,12 @@ void mergeArrays(Profesor per[] , int persona, Profesor per2[], int persona2, Pr
 		strcpy((arrF+h)->nombre, (arr2+i)->nombre);
 		(arrF+h)->calificacion=(arr2+i)->calificacion;
 	}
-//	for (i=0;i<persona;i++){//prototipo de otra funcion(otra opción)
+//	for (i=0;i<persona;i++){//prototipo de otra funcion(otra opciÃ³n)
 //		strcpy((arrF+persona3)->nombre, (arr+i)->nombre);
 //		(arrF+persona3)->calificacion=(arr+i)->calificacion;
 //		persona3++;
 //	}
-//	for(h=0;h<persona2;h++){//prototipo de otra funcion(otra opción)
+//	for(h=0;h<persona2;h++){//prototipo de otra funcion(otra opciÃ³n)
 //		strcpy((arrF+persona3)->nombre, (arr2+i)->nombre);
 //				(arrF+persona3)->calificacion=(arr2+i)->calificacion;
 //				persona3++;
@@ -129,10 +128,10 @@ void mergeArrays(Profesor per[] , int persona, Profesor per2[], int persona2, Pr
 }
 
 
-//void printArray(Profesor per3[], int persona){ //prototipo de otra funcion(otra opción)
+//void printArray(Profesor per3[], int persona){ //prototipo de otra funcion(otra opciÃ³n)
 //	int i;
 //	for(i=0; i<persona;i++){
-//		printf("Nombre: %s Calificación: %f\n", per3[i].nombre, per3[i].calificacion);
+//		printf("Nombre: %s CalificaciÃ³n: %f\n", per3[i].nombre, per3[i].calificacion);
 //
 //	}
 //}
@@ -140,7 +139,7 @@ void mergeArrays(Profesor per[] , int persona, Profesor per2[], int persona2, Pr
 void printArray(Profesor per3[], int persona3){
 	Profesor *p=per3;
 	for(int i=0; i<persona3;i++){
-		printf("Nombre: %s  \t",&(*(p+i)).nombre);
-		printf("Calificación: %f\n",&(*(p+i)).calificacion );
+		printf("Nombre: %s  \t",(*(p+i)).nombre);
+		printf("CalificaciÃ³n: %f\n",(*(p+i)).calificacion );
 	}
 }
